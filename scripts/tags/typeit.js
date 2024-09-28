@@ -23,7 +23,7 @@ const typeit = ([tag, options], content) => {
       utils.addEventListenerPjax(document, "pjax:complete", typeit);
     }()
     </script>
-  </div>`
+  </div>`.replace(/>(\s+)</g, '><')
 }
 
 hexo.extend.tag.register('typeit', typeit, {ends: true})
