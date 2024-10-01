@@ -170,15 +170,6 @@ aside:
   # --------------------------- end ---------------------------
 
   # --------------------------- start ---------------------------
-  # recent comments(⚠️ Comments need to be configured first.)
-  # 最新评论(⚠️ 需要先配置评论)
-  newest_comment:
-    enable: true
-    storage: .5 # 缓存时间 1: 1天 / .5 : 半天 / Cache time 1: 1 day .5 : half a day
-    limit: 5 # 评论数 / Number of comments
-  # --------------------------- end ---------------------------
-
-  # --------------------------- start ---------------------------
   # article table of contents
   # 文章目录
   toc:
@@ -444,7 +435,7 @@ footer:
 # 404 页面
 errorpage:
   img: /img/404.avif
-  text: =awa= Page NotFound # Text
+  text: =awa= Page Not Found # Text
   recommendList: true
 # --------------------------- end ---------------------------
 
@@ -727,6 +718,12 @@ comment:
     enable: false
     # Number of hot comments
     count: 3
+  # recent comments(⚠️ Comments need to be configured first.)
+  # 最新评论(⚠️ 需要先配置评论)
+  newest_comment:
+    enable: true
+    storage: .5 # 缓存时间 1: 1天 / .5 : 半天 / Cache time 1: 1 day .5 : half a day
+    limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo
 twikoo: # https://twikoo.js.org/
   envId: # url: https://twikoo.sondy.top/
@@ -887,10 +884,7 @@ right_menu:
   ctrlOriginalMenu: false
   # Simplified and Traditional Chinese translation.
   # 简繁体转换
-  translate:
-    enable: false
-    defaultEncoding: 2 # 1: 默认繁体 2: 默认简体
-    translateDelay: 0 # 首次加载翻译迟疑时间
+  translate: false
   # Custom list
   # 自定义列表
   custom_list:
@@ -953,6 +947,26 @@ background:
   dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
   light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
 # --------------------------- end ---------------------------
+
+# --------------------------- start ---------------------------
+translate:
+  enable: true
+  defaultEncoding: 2 # 1: 默认繁体 2: 默认简体
+  translateDelay: 0 # 首次加载翻译迟疑时间
+# --------------------------- end ---------------------------
+
+# --------------------------- start ---------------------------
+# Right-Sidebar
+# 右下角悬停导航栏
+rightside:
+  enable: false
+  percent: false
+  hide:
+    enable: false
+    translate: false
+    mode: false
+    aside: false
+# --------------------------- start ---------------------------
 
 # --------------------------- start ---------------------------
 # Do not modify unless necessary
