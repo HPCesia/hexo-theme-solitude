@@ -8,6 +8,9 @@ if $highlight_enable
 if $prismjs_enable
   @require "prismjs/index.styl"
 
+if $shiki_enable
+  @require "shiki/index.styl"
+
 figure
   &:hover
     box-shadow var(--efu-shadow-border-hover)
