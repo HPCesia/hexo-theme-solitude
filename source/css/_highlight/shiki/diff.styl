@@ -1,3 +1,10 @@
+$highlight-line-diff-add-bg = #a0e8ce
+$highlight-line-diff-add-bg-dark = #173b2e
+$highlight-line-diff-add-symbol = #3dd68c
+$highlight-line-diff-remove-bg = #d7a4a4
+$highlight-line-diff-remove-bg-dark = #421b1b
+$highlight-line-diff-remove-symbol = #dd6464
+
 figure.highlight
   table::-webkit-scrollbar
     color var(--efu-secondbg)
@@ -5,6 +12,28 @@ figure.highlight
     background var(--efu-hl-bg)
     border-radius 6px
     display initial
+
+  pre.has-diff
+    padding-left 1rem
+
+    .diff
+      &::before
+        position absolute
+        left 0.3rem
+
+      &.add
+        background-color $highlight-line-diff-add-bg
+
+        &::before
+          content "+"
+          color $highlight-line-diff-add-symbol
+
+      &.remove
+        background-color $highlight-line-diff-remove-bg
+
+        &::before
+          content "-"
+          color $highlight-line-diff-remove-symbol
 
   [data-theme=dark] &
     td.code
@@ -14,3 +43,11 @@ figure.highlight
         font-style var(--shiki-dark-font-style) !important
         font-weight var(--shiki-dark-font-weight) !important
         text-decoration var(--shiki-dark-text-decoration) !important
+
+    pre.has-diff
+      .diff
+        &.add
+          background-color $highlight-line-diff-add-bg-dark
+
+        &.remove
+          background-color $highlight-line-diff-remove-bg-dark

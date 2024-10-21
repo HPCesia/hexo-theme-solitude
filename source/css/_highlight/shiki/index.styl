@@ -12,6 +12,12 @@ figure
     overflow-y hidden
     overflow-x auto
 
+    tbody
+      display block
+
+    tr
+      display: flex
+
     td
       padding 0
       border none
@@ -45,5 +51,8 @@ figure
           width 100%
 
   .line
+    min-width 100%
+    display inline-block
+
     &.marked
       background-color: rgba(97, 97, 97, .314)
