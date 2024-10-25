@@ -634,6 +634,18 @@ class toc {
   }
 }
 
+class ref {
+  static init() {
+    const el = document.querySelectorAll('a.ref')
+    el.forEach((e) => {
+      e.addEventListener('click', (event) => {
+        event.preventDefault()
+        utils.scrollToDest(utils.getEleTop(document.getElementById(decodeURI(event.target.hash.replace('#', '')))), 300)
+      })
+    })
+  }
+}
+
 class tabs {
   static init() {
     this.clickFnOfTabs();
@@ -751,6 +763,7 @@ window.refreshFn = () => {
   if (is_post || is_page) {
     addHighlight();
     tabs.init();
+    ref.init();
   }
   if (is_post) {
     if (expire) tabs.expireAddListener();
