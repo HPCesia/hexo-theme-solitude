@@ -197,10 +197,3 @@ script.
         lure: !{lure ? JSON.stringify(lure) : false},
         expire: !{expire ? JSON.stringify(expire) : false},
     };
-
-if page.type === 'links'
-    script.
-        const APPLY_LINK_TEXT = {
-            butterfly: "```yml\n- name: \n  link: \n  avatar: \n  descr: \n  siteshot: \n```",
-            common: "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图：",
-        }

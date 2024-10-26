@@ -491,7 +491,11 @@ const hpcesia = {
     inputs.forEach(selector => {
       const el = document.querySelector(selector);
       if (el) {
-        type === "common" ? (el.value = APPLY_LINK_TEXT.common, el.setSelectionRange(5, 5)) : (el.value = APPLY_LINK_TEXT.butterfly, el.setSelectionRange(15, 15));
+        type === "common"
+          ? ((el.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图："),
+            el.setSelectionRange(5, 5))
+          : ((el.value = "```yml\n- name: \n  link: \n  avatar: \n  descr: \n  siteshot: \n```"),
+            el.setSelectionRange(15, 15));
         utils.scrollToDest(utils.getEleTop(document.getElementById('post-comment')), 300);
         el.focus();
         el.dispatchEvent(new Event('input', {bubble: true, cancelable: true}));
