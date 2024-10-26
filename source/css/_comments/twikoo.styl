@@ -187,16 +187,15 @@
 @media screen and (max-width: 768px)
   .tk-submit
     .el-button--primary
-      width 5rem
+      width 2.5rem
       height 55px
       top -66px
-      right 0
 
     .el-button--default
-      width 5rem
+      width 2.5rem
       height 55px
       top -130px
-
+      right 0
 
   .tk-row-actions-start
     top -170px
@@ -357,20 +356,18 @@
 
 @media screen and (max-width: 768px)
   .tk-meta-input
-    .el-input
-      .el-input-group__prepend
-        padding 0 .3rem !important
-
-  .tk-meta-input
     display flex
     flex-direction column
     top 0
+    width calc(100% - 3rem - 40px)
     // position inherit !important
 
-  .tk-meta-input
     .el-input
       margin-left 0 !important
       width 100% !important
+
+      .el-input-group__prepend
+        padding 0 .3rem !important
 
   .tk-icon
     position absolute
