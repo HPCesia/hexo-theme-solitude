@@ -485,6 +485,20 @@ const sco = {
     utils.addEventListenerPjax(switchBtn, 'click', handleSwitchBtn)
   }
 };
+const hpcesia = {
+  applyLinkComment(type) {
+    const inputs = ["#wl-edit", ".el-textarea__inner", "#veditor", ".atk-textarea"];
+    inputs.forEach(selector => {
+      const el = document.querySelector(selector);
+      if (el) {
+        type === "common" ? (el.value = APPLY_LINK_TEXT.common, el.setSelectionRange(5, 5)) : (el.value = APPLY_LINK_TEXT.butterfly, el.setSelectionRange(15, 15));
+        utils.scrollToDest(utils.getEleTop(document.getElementById('post-comment')), 300);
+        el.focus();
+        el.dispatchEvent(new Event('input', {bubble: true, cancelable: true}));
+      }
+    });
+  },
+}
 const addHighlight = () => {
   const highlight = GLOBAL_CONFIG.highlight;
   if (!highlight) return;
