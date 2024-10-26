@@ -3,13 +3,16 @@
 if(data)
     each item in data
             each y in item.link_list
-                - datalinks.push({ name: y.name,link: y.link})
+                if y.noTravel
+                    - datalinks.push({ name: y.name, link: y.link, noTravel: y.noTravel})
+                else
+                    - datalinks.push({ name: y.name, link: y.link})
 
 script.
     const links = !{JSON.stringify(datalinks)}
     const randomText = '!{_p('link.random')}'
     function travelling() {
-        const link = links[utils.randomNum(links.length)];
+        const link = links.filter((i) => !('noTravel' in i) && i.noTravel)[utils.randomNum(links.length)];
         Snackbar.show({
             text: randomText.replace(/\$\{name}/,link.name),
             duration: 8000,
