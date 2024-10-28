@@ -502,6 +502,14 @@ const hpcesia = {
       }
     });
   },
+  switchHideBgImg(){
+    const globalBg = document.getElementById('global_bg');
+    if (globalBg.style.backgroundImage === 'none') {
+      globalBg.style.backgroundImage = '';
+    } else {
+      globalBg.style.backgroundImage = 'none';
+    }
+  }
 }
 const addHighlight = () => {
   const highlight = GLOBAL_CONFIG.highlight;

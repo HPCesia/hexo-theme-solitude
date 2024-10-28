@@ -417,7 +417,8 @@ hexo.extend.filter.register('before_generate', () => {
       hide: {
         enable: false,
         translate: false,
-        mode: false
+        mode: false,
+        background_image: false
       }
     },
     CDN: {
