@@ -56,11 +56,16 @@ nav:
   right:
     random: false # Random article / 随机文章按钮
     custom:
-    #  - name: 开往 # 名字
-    #    url: https://www.travellings.cn/go.html # 跳转链接
-    #    icon: fas fa-train # 图标
-    #    onclick: # 点击事件
-    #    id: travellings_button # id
+      # - name: 订阅
+      #   url: /rss2.xml
+      #   icon: fas fa-rss
+      #   onclick:
+      #   id: rss_nav_button
+      # - name: 开往 # 名字
+      #   url: https://www.travellings.cn/go.html # 跳转链接
+      #   icon: fas fa-train # 图标
+      #   onclick: # 点击事件
+      #   id: travellings_button # id
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
