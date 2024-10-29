@@ -574,7 +574,9 @@ footer:
 
   # Random link
   # 随机友链
-  randomlink: false # Random link
+  randomlink:
+    enable: true
+    num: 3
   # License
   license: # https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh # License
 

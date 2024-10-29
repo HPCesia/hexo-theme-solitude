@@ -39,7 +39,7 @@ if group
                     each url, y in value
                         a.footer-item(href=url_for(url), title=y)= y
 
-        if theme.footer && theme.footer.randomlink
+        if theme.footer && theme.footer.randomlink.enable
             div.footer-group
                 div.footer-title-group
                     h3.footer-title= _p('footer.randomlink')

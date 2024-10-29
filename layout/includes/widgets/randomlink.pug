@@ -26,7 +26,7 @@ script.
         });
     }
 
-if theme.footer.randomlink
+if theme.footer.randomlink.enable
     script.
         function randomLinksList() {
             const linkcard = document.getElementById('friend-links-in-footer');
@@ -34,7 +34,7 @@ if theme.footer.randomlink
 
             let data = '';
             let linksCopy = [...links];
-            let count = Math.min(3, linksCopy.length);
+            let count = Math.min(!{theme.footer.randomlink.num}, linksCopy.length);
 
             for (let i = 0; i < count; i++) {
                 let index = utils.randomNum(linksCopy.length);

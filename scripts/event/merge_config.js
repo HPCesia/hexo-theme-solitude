@@ -184,7 +184,10 @@ hexo.extend.filter.register('before_generate', () => {
         right: null,
       },
       group: null,
-      randomlink: false,
+      randomlink: {
+        enable: false,
+        num: 3,
+      },
       privacy: null,
       license: null,
       links: [{
