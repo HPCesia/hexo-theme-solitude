@@ -173,11 +173,13 @@
     width 2.25rem
     position absolute
     top -44px
-    right 2.75rem
     margin-left .25rem !important
     height 34px
     text-align center
     padding 0px 0px !important
+
+  .tk-preview
+    right 2.75rem
 
 .tk-row-actions-start
   position absolute
@@ -195,6 +197,8 @@
       width 2.5rem
       height 55px
       top -130px
+
+    .tk-preview
       right 0
 
   .tk-row-actions-start
@@ -282,6 +286,18 @@
     border none
     border-top var(--style-border-dashed)
 
+  .tk-submit
+    .tk-row
+      .tk-avatar
+        display: none
+
+      .tk-cancel
+        right 5.5rem
+
+      .tk-meta-input
+        width calc(100% - 8.25rem)
+        left 0
+
 #page
   .tk-comments-container
     > .tk-comment
@@ -296,6 +312,25 @@
       padding 1rem
       border var(--style-border-always)
       box-shadow var(--efu-shadow-border)
+
+    .el-button--primary
+      height 33px
+      top -43px
+
+    .el-button--default
+      height 33px
+
+    .tk-cancel
+      right 0 !important
+      top -86px
+
+    .tk-preview
+      right 0
+      top -130px
+
+    .tk-meta-input
+      width calc(100% - 3rem) !important
+      left 0
 
   .tk-icon.__comments
     left .5rem
