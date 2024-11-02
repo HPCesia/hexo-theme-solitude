@@ -270,18 +270,20 @@ const sco = {
     el && GLOBAL_CONFIG.runtime && (el.innerText = utils.timeDiff(new Date(GLOBAL_CONFIG.runtime), new Date()) + GLOBAL_CONFIG.lang.day);
   },
   toTalk(txt) {
-    const inputs = ["#wl-edit", ".el-textarea__inner", "#veditor", ".atk-textarea"];
-    inputs.forEach(selector => {
-      const el = document.querySelector(selector);
-      if (el) {
-        el.dispatchEvent(new Event('input', {bubble: true, cancelable: true}));
-        el.value = '> ' + txt.replace(/\n/g, '\n> ') + '\n\n';
-        utils.scrollToDest(utils.getEleTop(document.getElementById('post-comment')), 300);
-        el.focus();
-        el.setSelectionRange(-1, -1);
-      }
-    });
-    utils.snackbarShow(GLOBAL_CONFIG.lang.totalk, false, 2000);
+    utils.scrollToDest(utils.getEleTop(document.getElementById('post-comment')), 300);
+    setTimeout(() => {
+      const inputs = ["#wl-edit", ".el-textarea__inner", "#veditor", ".atk-textarea"];
+      inputs.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (el) {
+          el.dispatchEvent(new Event('input', { bubble: true, cancelable: true }));
+          el.value = '> ' + txt.replace(/\n/g, '\n> ') + '\n\n';
+          el.focus();
+          el.setSelectionRange(-1, -1);
+        }
+      });
+      utils.snackbarShow(GLOBAL_CONFIG.lang.totalk, false, 2000);
+    }, 500);
   },
   initbbtalk() {
     const bberTalkElement = document.querySelector('#bber-talk');
@@ -488,19 +490,21 @@ const sco = {
 const hpcesia = {
   applyLinkComment(type) {
     const inputs = ["#wl-edit", ".el-textarea__inner", "#veditor", ".atk-textarea"];
-    inputs.forEach(selector => {
-      const el = document.querySelector(selector);
-      if (el) {
-        type === "common"
-          ? ((el.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图："),
-            el.setSelectionRange(5, 5))
-          : ((el.value = "```yml\n- name: \n  link: \n  avatar: \n  descr: \n  siteshot: \n```"),
-            el.setSelectionRange(15, 15));
-        utils.scrollToDest(utils.getEleTop(document.getElementById('post-comment')), 300);
-        el.focus();
-        el.dispatchEvent(new Event('input', {bubble: true, cancelable: true}));
-      }
-    });
+    utils.scrollToDest(utils.getEleTop(document.getElementById('post-comment')), 300);
+    setTimeout(() => {
+      inputs.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (el) {
+          type === "common"
+            ? ((el.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图："),
+              el.setSelectionRange(5, 5))
+            : ((el.value = "```yml\n- name: \n  link: \n  avatar: \n  descr: \n  siteshot: \n```"),
+              el.setSelectionRange(15, 15));
+          el.focus();
+          el.dispatchEvent(new Event('input', { bubble: true, cancelable: true }));
+        }
+      });
+    }, 500);
   },
   switchHideBgImg(){
     const globalBg = document.getElementById('global_bg');
