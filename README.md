@@ -1,5 +1,8 @@
 [English](README_en-US.md)丨简体中文丨[繁体中文](README_zh-Hant.md)
 
+> [!WARNING]
+> 该分支仅用于本人的个人博客使用，你可以随意拿取所需的修改，但我不对该分支的可用性做任何保证。
+
 <div align="center">
 
   <h1 style="background: linear-gradient(to right, #76CBEC, #F7A137); -webkit-background-clip: text; color: transparent; font-size: 4.4rem">Solitude</h1>
