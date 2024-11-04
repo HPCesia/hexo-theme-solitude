@@ -276,10 +276,10 @@ const sco = {
       inputs.forEach(selector => {
         const el = document.querySelector(selector);
         if (el) {
-          el.dispatchEvent(new Event('input', { bubble: true, cancelable: true }));
           el.value = '> ' + txt.replace(/\n/g, '\n> ') + '\n\n';
           el.focus();
           el.setSelectionRange(-1, -1);
+          el.dispatchEvent(new Event('input', { bubble: true, cancelable: true }));
         }
       });
       utils.snackbarShow(GLOBAL_CONFIG.lang.totalk, false, 2000);
