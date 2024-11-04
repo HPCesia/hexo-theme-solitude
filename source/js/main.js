@@ -271,7 +271,7 @@ const sco = {
   },
   toTalk(txt) {
     utils.scrollToDest(utils.getEleTop(document.getElementById('post-comment')), 300);
-    setTimeout(() => {
+    const toTalkFn = () => {
       const inputs = ["#wl-edit", ".el-textarea__inner", "#veditor", ".atk-textarea"];
       inputs.forEach(selector => {
         const el = document.querySelector(selector);
@@ -283,7 +283,8 @@ const sco = {
         }
       });
       utils.snackbarShow(GLOBAL_CONFIG.lang.totalk, false, 2000);
-    }, 500);
+    }
+    hpcesia.waitTwikoo(toTalkFn)
   },
   initbbtalk() {
     const bberTalkElement = document.querySelector('#bber-talk');
@@ -513,6 +514,14 @@ const hpcesia = {
     } else {
       globalBg.style.backgroundImage = 'none';
     }
+  },
+  waitTwikoo(callback, scale = 100){
+    setTimeout(() => {
+      if (window.twikoo)
+        callback()
+      else
+        hpcesia.waitTwikoo(callback)
+    }, scale);
   }
 }
 const addHighlight = () => {
