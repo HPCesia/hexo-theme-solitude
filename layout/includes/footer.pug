@@ -46,6 +46,15 @@ if group
                     button.random-friends-btn(onclick='randomLinksList()', title=_p('footer.randomlink'))
                         i.solitude.fa-solid.fa-arrows-rotate
                 div.footer-links#friend-links-in-footer
+if theme.footer && theme.footer.image
+    div#footer-image
+        img.footer.entered.loaded(
+            src=theme.footer.image
+            onerror="this.onerror=null;this.src='/img/404.avif';"
+            data-lazy-src=theme.footer.image
+            alt="Footer Image"
+            data-ll-status="loaded"
+        )
 div#footer-bar
     div.footer-bar-links
         div.footer-bar-left

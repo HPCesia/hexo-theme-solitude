@@ -580,6 +580,8 @@ footer:
   # License
   license: # https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh # License
 
+  image: # 页脚图片
+
   # Footer information text
   # 页脚信息文字
   # Please do not delete the theme information, this is respect for the author
