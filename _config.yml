@@ -945,6 +945,14 @@ busuanzi_use: 0
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
+# Enhance the mixed layout of CJK and Latin characters
+# CJK 与拉丁字符混排效果增强
+cjk_latin_layout_enhance:
+  enable: false
+  use_halt: false # ⚠️仅当字体支持 OpenType halt 特性时启用 / ⚠️Use only when the font supports the OpenType halt feature
+# --------------------------- end ---------------------------
+
+# --------------------------- start ---------------------------
 # This part is only supported in mainland China, and we will consider supporting ChatGPT Key in the future.
 # 该部分仅支持中国大陆，后续会考虑支持 ChatGPT Key。
 tianli_talk:
@@ -1016,4 +1024,5 @@ CDN:
     # swiper_js:
     # busuanzi_js:
     # snackbar_js:
+    # heti:
 # --------------------------- end ---------------------------

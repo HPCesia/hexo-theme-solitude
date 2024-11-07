@@ -270,6 +270,10 @@ hexo.extend.filter.register('before_generate', () => {
     },
     wordcount: false,
     busuanzi: false,
+    cjk_latin_layout_enhance: {
+      enable: false,
+      use_halt: false
+    },
     search: {
       enable: false,
       type: 'local',
