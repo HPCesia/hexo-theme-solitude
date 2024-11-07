@@ -2,10 +2,6 @@
   .tk-submit
     margin-top 0
 
-  .tk-admin-config-group-title
-    margin-top 0
-    line-height normal
-
   .tk-row
     position relative
 
@@ -29,6 +25,11 @@
 
 .twikoo-info
   color var(--efu-secondtext)
+
+.tk-actions
+  display inline !important
+  transition opacity 0.2s ease-in-out 0.1s
+  opacity 0
 
 .tk-action
   .tk-action-link:first-child
@@ -132,12 +133,18 @@
     padding-left 2px !important
     padding-right 2px !important
 
+  .tk-admin-config-group[open]
+    .tk-admin-config-group-title
+      background var(--efu-lighttext) !important
+
   .tk-admin-config-group-title
+    margin-top 0
+    line-height normal
     background var(--efu-card-bg) !important
     color var(--efu-fontcolor) !important
 
-    &:hover, &:focus
-      background var(--efu-main) !important
+    &:hover
+      background var(--efu-lighttext) !important
 
 .tk-comments
   .el-button--primary
@@ -277,6 +284,10 @@
     padding-top 0.5rem
     border none
     border-top var(--style-border-dashed)
+
+    &:hover
+      .tk-actions
+        opacity 1
 
   .tk-submit
     .tk-row
