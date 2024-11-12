@@ -18,12 +18,12 @@
                 .li-style.bber-loading(style="text-align: center") Loading...
                 script.
                     (async function () {
-                        const response = await fetch('!{url_for(theme.says.api)}');
+                        const response = await fetch("!{url_for(theme.says.api)}");
                         const data = await response.json();
-                        const list = data.memos.slice(0, 10).map(item => {
-                            let type = item.image ? '【图片】' : item.aplayer ? '【音乐】' : item.video ? '【视频】' : '';
-                            return `<div class="li-style swiper-slide">${item.content + type}</div>`
+                        const list = data.memos.slice(0, 10).map((item) => {
+                            let type = item.image ? "【图片】" : item.aplayer ? "【音乐】" : item.video ? "【视频】" : "";
+                            return `<div class="li-style swiper-slide">${item.content + type}</div>`;
                         });
-                        document.querySelector('#bber-talk').innerHTML = list.join(' ');
-                    })()
+                        document.querySelector("#bber-talk").innerHTML = list.join(" ");
+                    })();
     i.bber-gotobb.solitude.fa-solid.fa-circle-chevron-right(title=_p('home.bbtime.text') onclick=`pjax.loadUrl('${url_for(theme.says.page)}')`)

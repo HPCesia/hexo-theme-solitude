@@ -94,8 +94,10 @@ if theme.says.enable
                         document.querySelector("#bber").insertAdjacentHTML("beforeend", essayTips);
                         (function wait() {
                             setTimeout(() => {
-                                if (sco)
+                                if (sco && utils) {
                                     sco.changeTimeFormat(document.querySelectorAll('time'));
+                                    utils.lightbox(document.querySelectorAll('img'))
+                                }
                                 else
                                     wait()
                             }, 500);
@@ -124,8 +126,8 @@ if theme.says.enable
                                 if (item.resources.length) {
                                     if (!img) img = [];
                                     item.resources.forEach((e) => {
-                                        if (e.externalLink) img.push(e.externalLink);
-                                        else img.push(`${baseUrl}/o/r/${e.uid}`);
+                                        if (e.externalLink) img.push(`![${e.filename}](${e.externalLink})`);
+                                        else img.push(`![${e.filename}](${baseUrl}/o/r/${e.uid})`);
                                     });
                                 }
                                 if (img)
@@ -220,8 +222,8 @@ if theme.says.enable
                                 if (item.resources.length) {
                                     if (!img) img = [];
                                     item.resources.forEach((e) => {
-                                        if (e.externalLink) img.push(e.externalLink);
-                                        else img.push(`${baseUrl}/o/r/${e.uid}`);
+                                        if (e.externalLink) img.push(`![${e.filename}](${e.externalLink})`);
+                                        else img.push(`![${e.filename}](${baseUrl}/o/r/${e.uid})`);
                                     });
                                 }
                                 if (img)
