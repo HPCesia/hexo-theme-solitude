@@ -176,6 +176,8 @@ hexo.extend.filter.register('before_generate', () => {
     },
     says: {
       enable: false,
+      mode: "local",
+      api: null,
       home_mini: false,
       style: 1,
       strip: 30

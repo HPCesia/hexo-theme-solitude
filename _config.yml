@@ -920,6 +920,8 @@ envelope:
 # 即可短文
 says:
   enable: false
+  mode: local # local | memos
+  api:
   home_mini: false
   page: /essay/
   style: 1
