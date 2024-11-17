@@ -62,7 +62,8 @@ if theme.says.enable
                 script.
                     (async function () {
                         const strip = !{ theme.says.strip };
-                        let url = `!{url_for(theme.says.api)}?pageSize=${strip === -1 ? 65535 : strip}`;
+                        let url = '!{url_for(theme.says.api)}'
+                        url = url.includes('?') ? '' : '?' + `pageSize=${strip === -1 ? 65535 : strip}`;
                         const baseUrl = url.substring(0, url.indexOf("/", url.indexOf("//") + 2));
                         const response = await fetch(url);
                         const data = await response.json();
