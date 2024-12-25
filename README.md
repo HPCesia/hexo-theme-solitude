@@ -12,6 +12,7 @@
 
 ![hexo version](https://img.shields.io/badge/hexo-7.0.0+-blue?logo=hexo&logoColor=white)
 ![node version](https://img.shields.io/badge/node-14.0.0+-white?logo=node.js&logoColor=white)
+![JetBrains](https://img.shields.io/badge/jetbrains-support-white?logo=jetbrains)
 
 [文档](https://solitude.js.org/)丨[预览](https://blog.hpcesia.com/)
 

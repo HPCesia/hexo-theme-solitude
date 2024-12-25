@@ -98,6 +98,7 @@ hometop:
   group:
     # 热门: /tags/Fire/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
   recommendList:
+    enable: true
     sup: 置顶
     title: Solitude 官方文档
     url: https://solitude.js.org/
@@ -283,7 +284,7 @@ post:
       license: CC BY-NC-SA 4.0
       # License link
       # 许可证链接
-      licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
+      licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
   # Article meta information
   # 文章元信息
   meta:
@@ -558,7 +559,7 @@ footer:
     author: false # img url / false
     left:
       # Github: https://github.com/everfu || fab fa-github # 名称: 链接 || 图标
-      # Mail: mailto:o@everfu.cn || fab fa-envelope
+      # Mail: mailto:o@everfu.org || far fa-envelope
     right:
       # Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
       # Douyin: https://v.douyin.com/iJsLc8jt/ || fab fa-tiktok
@@ -574,10 +575,18 @@ footer:
 
   # 随机友链
   randomlink:
-    enable: true
+    enable: false
     num: 3
-  # License
-  license: # https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh # License
+  # 许可证
+  license: # https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans # 许可证
+
+  # 备案
+  beian:
+    # - name: 湘公网安备43048102000175号
+    #   icon: https://beian.mps.gov.cn/img/logo01.dd7ff50e.png
+    #   url: https://beian.mps.gov.cn/#/query/webSearch
+    # - name: 湘ICP备2024080357号-1
+    #   url: https://beian.miit.gov.cn/
 
   image: # 页脚图片
 
@@ -606,7 +615,7 @@ errorpage:
 # can only use NetEase Cloud Music, QQ Music and other music platforms supported by the mainland China region,
 # the subsequent consideration of the use of JSON files to store music information and customize the implementation of the third-party API does not depend on the page.
 # Music Page
-meting_api: "https://meting.everfu.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r" # Custom API
+meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r" # Custom API
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -615,7 +624,7 @@ meting_api: "https://meting.everfu.cn/?server=:server&type=:type&id=:id&auth=:au
 capsule:
   enable: false
   # 歌单 ID / 单曲 ID
-  id: 8407304077
+  id: 5144842535
   # 服务商：netease / qq / xiami / kugou / baidu
   server: netease
   # 类型：playlist / song
@@ -892,7 +901,7 @@ search:
 music:
   enable: false
   # 歌单 ID / 单曲 ID
-  id: 1994908354
+  id: 5144842535
   # 服务商：netease / qq / xiami / kugou / baidu
   server: netease
   # 类型：playlist / song
@@ -901,6 +910,8 @@ music:
   volume: 0.8
   # 是否自动播放
   mutex: true
+  # 播放方式：list / random
+  order: list
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -936,7 +947,6 @@ recent_comments:
   limit: 50 # ⚠️waline 仅支持最大50条评论 / ⚠️waline only supports a maximum of 50 comments
   cache: 0.2 # 1 = 1天 / 1 = 1 day
   page: /recentcomments/ # 最近评论页面 / recent comments page
-  img: /img/recent_c.avif # 中控台显示图片（不填不显示） / image displayed in the console
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -1004,27 +1014,40 @@ google_adsense:
 # 非必要请勿修改
 CDN:
   internal: local # local / cdnjs / jsdelivr / unpkg / custom
-  third_party: cdnjs # cdnjs / jsdelivr / unpkg / custom
+  third_party: custom # cdnjs / jsdelivr / unpkg / custom
   version: true # 是否使用版本号
-  custom_format: //open.lightxi.com/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file} # 自定义格式
+  custom_format: https://fastly.jsdelivr.net/npm/${name}@${version}/${min_file} # 自定义格式
   # 直接覆盖默认 CDN 链接（优先级最高）
   options:
-    # algolia_search:
-    # instantsearch:
-    # pjax:
-    # twikoo:
-    # waline_js:
-    # waline_css:
-    # katex:
-    # katex_copytex:
-    # lazyload:
-    # aplayer_css:
-    # aplayer_js:
-    # meting_js:
-    # pace_js:
-    # swiper_css:
-    # swiper_js:
-    # busuanzi_js:
-    # snackbar_js:
-    # heti:
+    # algolia_search
+    # aplayer_css
+    # aplayer_js
+    # artalk_css
+    # artalk_js
+    # blueimp_md5
+    # busuanzi_js
+    # chart_js
+    # color_thief
+    # fancyapps_css
+    # fancyapps_ui
+    # fontawesome
+    # instantsearch
+    # katex
+    # katex_copytex
+    # lazyload
+    # medium_zoom
+    # mermaid_js
+    # meting_js
+    # pace_js
+    # pjax
+    # qrcode
+    # snackbar
+    # swiper_css
+    # swiper_js
+    # twikoo
+    # typeit_js
+    # valine
+    # waline_css
+    # waline_js
+    # heti
 # --------------------------- end ---------------------------
